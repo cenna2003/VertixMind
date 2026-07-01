@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VertexMind · Mission 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-backdrop" aria-hidden="true"></div>
+
+<header>
+    <div class="header-inner">
+        <div class="brand">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="28" height="28">
+                    <circle cx="16" cy="6" r="3" class="node"></circle>
+                    <circle cx="6" cy="24" r="3" class="node"></circle>
+                    <circle cx="26" cy="24" r="3" class="node"></circle>
+                    <line x1="16" y1="6" x2="6" y2="24" class="edge"></line>
+                    <line x1="16" y1="6" x2="26" y2="24" class="edge"></line>
+                    <line x1="6" y1="24" x2="26" y2="24" class="edge"></line>
+                </svg>
+            </span>
+            <span class="brand-name">VertexMind</span>
+        </div>
+        <div class="mission-badge">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="eyebrow">Mission</span>
+            <span class="mission-id">01</span>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <p class="eyebrow">Directive</p>
+        <h2>Kickstart Your Frontend Development Career</h2>
+        <p class="hero-copy">Join VertexMind's Frontend Internship Program to work on real projects while learning industry best practices..</p>
+
+        <div class="console">
+            <div class="console-head">
+                <span class="console-dot"></span>
+                <span class="console-dot"></span>
+                <span class="console-dot"></span>
+                <span class="console-label">roster.query</span>
+            </div>
+            <div class="console-body">
+                <button id="load-btn" onclick="getUsers()">
+                    <span class="btn-prompt">&gt;</span> Load Users
+                </button>
+                <p class="console-hint">Fetches the live roster from the network endpoint.</p>
+            </div>
+        </div>
+
+        <div id="result" aria-live="polite"></div>
+    </section>
+</main>
+
+<footer>
+    <p>Created by CENNA JOJI</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
