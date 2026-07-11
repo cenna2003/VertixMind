@@ -21,3 +21,11 @@ document.getElementById('itemForm').addEventListener('submit', async (e) => {
 });
 
 loadItems();
+
+app.post('/api/items', async (req, res) => {
+  if (!req.body.name || req.body.name.trim() === '') {
+    return res.status(400).json({ error: 'Name is required' });
+  }
+  const item = await Item.create(req.body);
+  res.status(201).json(item);
+});
